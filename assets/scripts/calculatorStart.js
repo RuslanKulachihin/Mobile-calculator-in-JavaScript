@@ -49,10 +49,10 @@ function calculatorStart(input = 0, result = 0) {
         document.querySelectorAll('.calculator-button').forEach((element) => {
             if (element.id === 'remove') {
                 let idTimeout;
-                element.addEventListener('mousedown', () => {
+                element.addEventListener('pointerdown', () => {
                     idTimeout = setTimeout(() => dialRemove(), 500);
                 });
-                element.addEventListener('mouseup', () => {
+                element.addEventListener('pointerup', () => {
                     clearTimeout(idTimeout);
                 });
             }
